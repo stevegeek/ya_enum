@@ -1,4 +1,6 @@
 target :lib do
-  check "lib/enum_class"
+  check "lib/ya_enum"
   signature "sig"
+
+  library "forwardable"
 end

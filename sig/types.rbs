@@ -1,5 +1,29 @@
-class EnumClass
+module YaEnum
   VERSION: String
 
+  class Enum
+    extend ::Forwardable
+
+    def self.inherited: (Enum subclass) -> void
+
+    # Define an entry in the enum
+    def self.define: (Symbol key, untyped value) -> void
+
+    # Get the enum value
+    def self.get: (Symbol key, ?raises: bool) -> (nil | untyped)
+
+    # Get multiple keys at once
+    def self.get_multiple: (*Symbol keys, ?raises: bool) -> Array[untyped]
+
+    # Check if value is used in enum
+    def self.include?: (untyped value) -> bool
+
+    # Convert a string to a enum key
+    def self.keyify: (String name) -> Symbol
+
+    private
+
+    attr_reader self.enum_store: Hash[Symbol, untyped]
+  end
 
 end
