@@ -1,7 +1,7 @@
 require_relative "lib/yae/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "Yae"
+  spec.name = "yae"
   spec.version = Yae::VERSION
   spec.authors = ["Stephen Ierodiaconou"]
   spec.email = ["stevegeek@gmail.com"]
