@@ -2,13 +2,13 @@
 
 require "test_helper"
 
-class YaEnumEnumTest < Minitest::Test
+class YaeEnumTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::YaEnum::VERSION
+    refute_nil ::Yae::VERSION
   end
 
   def test_it_defines_values_and_gets
-    enum = Class.new(YaEnum::Enum) do
+    enum = Class.new(Yae::Enum) do
       define :foo, 1
       define :bar, 2
     end
@@ -19,7 +19,7 @@ class YaEnumEnumTest < Minitest::Test
   end
 
   def test_it_allows_inheritance_of_keys
-    enum = Class.new(YaEnum::Enum) do
+    enum = Class.new(Yae::Enum) do
       define :foo, 1
       define :bar, 2
     end
@@ -35,7 +35,7 @@ class YaEnumEnumTest < Minitest::Test
   end
 
   def test_get_multiple
-    enum = Class.new(YaEnum::Enum) do
+    enum = Class.new(Yae::Enum) do
       define :foo, 1
       define :bar, 2
     end
@@ -44,7 +44,7 @@ class YaEnumEnumTest < Minitest::Test
   end
 
   def test_include?
-    enum = Class.new(YaEnum::Enum) do
+    enum = Class.new(Yae::Enum) do
       define :foo, 1
       define :bar, 2
     end
@@ -55,7 +55,7 @@ class YaEnumEnumTest < Minitest::Test
   end
 
   def test_keyifying
-    enum = Class.new(YaEnum::Enum) do
+    enum = Class.new(Yae::Enum) do
       define :foo, 1
       define :bar_things, 2
     end

@@ -1,4 +1,4 @@
-module YaEnum
+module Yae
   VERSION: String
 
   class Enum
@@ -20,6 +20,29 @@ module YaEnum
 
     # Convert a string to a enum key
     def self.keyify: (String name) -> Symbol
+
+    # Delegate methods to the hash
+    def self.key: (untyped) -> Symbol
+
+    def self.key?: (Symbol key) -> bool
+
+    def self.keys: () -> Array[Symbol]
+
+    def self.values: () -> Array[untyped]
+
+    def self.each: () { ([Symbol, untyped]) -> void } -> Hash[Symbol, untyped]
+
+    def self.map: () { ([Symbol, untyped]) -> untyped } -> Array[untyped]
+
+    def self.to_a: () -> Array[[Symbol, untyped]]
+
+    def self.select: () { ([Symbol, untyped]) -> boolish } -> Hash[Symbol, untyped]
+      | () -> Enumerator[[[Symbol, untyped]], Hash[Symbol, untyped]]
+
+    def self.reject: () { (Symbol, untyped) -> boolish } -> Hash[Symbol, untyped]
+      | () -> Enumerator[[Symbol, untyped], Hash[Symbol, untyped]]
+
+    def self.to_h: () -> Hash[Symbol, untyped]
 
     private
 

@@ -1,16 +1,16 @@
-require_relative "lib/ya_enum/version"
+require_relative "lib/yae/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "ya_enum"
-  spec.version = YaEnum::VERSION
+  spec.name = "Yae"
+  spec.version = Yae::VERSION
   spec.authors = ["Stephen Ierodiaconou"]
   spec.email = ["stevegeek@gmail.com"]
 
-  spec.summary = "ya_enum (Yet Another Enum) provides a simple enum class (enumerated type) implementation, YaEnum::Enum"
-  spec.description = "ya_enum provides a simple enum class (enumerated type) implementation (YaEnum::Enum) that can be used " \
-                       "to abstract a set of values. It also provides methods to check values existence in the enum" \
-                       " and to iterate over its contents."
-  spec.homepage = "https://github.com/stevegeek/ya_enum"
+  spec.summary = "yae (Yet Another Enum) provides a simple enum class (enumerated type) implementation, Yae::Enum"
+  spec.description = "yae provides a simple enum class (enumerated type) implementation (Yae::Enum) that can be used " \
+                       "to abstract a set of values. It also provides methods to check values existence in the enum " \
+                       "and to iterate over its contents."
+  spec.homepage = "https://github.com/stevegeek/yae"
   spec.license = "MIT"
 
   spec.required_ruby_version = Gem::Requirement.new(">= 2.6.0")

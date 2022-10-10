@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require "ya_enum/version"
 require "forwardable"
 
 # Implements an enum
-module YaEnum
+module Yae
   class Enum
     class << self
       extend ::Forwardable
@@ -33,7 +32,7 @@ module YaEnum
 
       # Check if value is used in enum
       def include?(value)
-        enum_store&.has_value?(value)
+        !!enum_store&.has_value?(value)
       end
 
       # Delegate enumerable methods to underlying hash
@@ -45,9 +44,8 @@ module YaEnum
         :each,
         :map,
         :select,
-        :to_a,
-        :inject,
         :reject,
+        :to_a,
         :to_h
 
       # Convert a string to a enum key
