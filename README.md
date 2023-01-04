@@ -1,8 +1,6 @@
 # Yae::Enum
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/yae`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+"Yet another enum" for Ruby.
 
 ## Installation
 
@@ -22,7 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class FooBar < Yae::Enum
+  define :foo, 1
+  define :bar, "bar"
+end
+
+FooBar.get(:foo) # => 1
+FooBar.get(:bar) # => "bar"
+```
+
+By default `.get` raises if the key doesn't exist but this can be changed
+
+```ruby
+FooBar.get(:baz, raises: false) # => nil
+```
+
+Other methods such as `.get_multiple`, `.include?` and so on exist, see `lib/yae/enum.rb`
 
 ## Development
 
@@ -32,8 +46,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/yae.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/stevegeek/yae.
 
 ## License
 

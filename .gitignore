@@ -8,3 +8,5 @@
 /tmp/
 .idea/
 .tool-versions
+*.gem
+*.lock
